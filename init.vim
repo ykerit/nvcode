@@ -61,6 +61,7 @@ else
   luafile ~/.config/nvim/lua/lsp/json-ls.lua
   luafile ~/.config/nvim/lua/lsp/vim-ls.lua
   luafile ~/.config/nvim/lua/lsp/yaml-ls.lua
+  luafile ~/.config/nvim/lua/lsp/clangd-ls.lua
 endif
 source $HOME/.config/nvim/plug-config/quickscope.vim
 
