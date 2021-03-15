@@ -66,3 +66,11 @@ set foldlevel=20
   "Save the state for the next time
 " autocmd BufWinLeave *.* mkview
 " autocmd BufWinEnter *.* silent! loadview
+
+" font powerline
+if has("mac") || has("macunix")
+    set guifont=Monaco\ for\ Powerline:h24
+elseif has("win32") || has("win64")
+    set guifont=Monaco\ for\ Powerline:h14:cANSI
+    set renderoptions=type:directx,renmode:5
+endif
