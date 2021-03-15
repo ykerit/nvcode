@@ -38,7 +38,6 @@ else
   source ~/.config/nvim/plug-config/far.vim
   source ~/.config/nvim/plug-config/tagalong.vim
   source ~/.config/nvim/plug-config/bracey.vim
-  source ~/.config/nvim/plug-config/markdown-preview.vim
   source ~/.config/nvim/plug-config/nvimtree-config.vim
   source ~/.config/nvim/plug-config/lsp-saga.vim
   source ~/.config/nvim/plug-config/lightbulb.vim
@@ -58,12 +57,7 @@ else
   luafile ~/.config/nvim/lua/lsp/lua-ls.lua
   luafile ~/.config/nvim/lua/lsp/python-ls.lua
   luafile ~/.config/nvim/lua/lsp/bash-ls.lua
-  autocmd FileType java luafile ~/.config/nvim/lua/lsp/java-ls.lua
-  luafile ~/.config/nvim/lua/lsp/css-ls.lua
   luafile ~/.config/nvim/lua/lsp/docker-ls.lua
-  luafile ~/.config/nvim/lua/lsp/graphql-ls.lua
-  luafile ~/.config/nvim/lua/lsp/html-ls.lua
-  luafile ~/.config/nvim/lua/lsp/javascript-ls.lua
   luafile ~/.config/nvim/lua/lsp/json-ls.lua
   luafile ~/.config/nvim/lua/lsp/vim-ls.lua
   luafile ~/.config/nvim/lua/lsp/yaml-ls.lua

@@ -10,12 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Comments
     Plug 'tpope/vim-commentary'
-    " Change dates fast
-    Plug 'tpope/vim-speeddating'
     " Text Navigation
     Plug 'unblevable/quick-scope'
-    " Useful for React Commenting 
-    Plug 'suy/vim-context-commentstring'
     " While I'm learning Lua
     Plug 'nanotee/nvim-lua-guide'
     Plug 'rafcamlet/nvim-luapad'
@@ -46,17 +42,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kevinhwang91/rnvimr'
     " Terminal
     Plug 'voldikss/vim-floaterm'
-    " Start Screen
-    Plug 'mhinz/vim-startify'
     " Vista
     Plug 'liuchengxu/vista.vim'
-    " See what keys do like in emacs
-    Plug 'liuchengxu/vim-which-key'
     " Zen mode
     Plug 'junegunn/goyo.vim'
-    " Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
     " Interactive code
     Plug 'metakirby5/codi.vim'
     " Better tabline
@@ -65,8 +54,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'brooth/far.vim'
     " Smooth scroll
     Plug 'psliwka/vim-smoothie'
-    " Markdown Preview
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
     " Intuitive buffer closing
     Plug 'moll/vim-bbye'
     " Telescope
@@ -80,7 +67,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'glepnir/lspsaga.nvim'
     Plug 'onsails/lspkind-nvim'
     Plug 'kosayoda/nvim-lightbulb'
-    Plug 'mfussenegger/nvim-jdtls'
     Plug 'mfussenegger/nvim-dap'
     " https://github.com/mhartington/formatter.nvim look into this
     " File Explorer
@@ -95,20 +81,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
     Plug 'rhysd/git-messenger.vim'
-    " Easily Create Gists
-    Plug 'mattn/vim-gist'
-    Plug 'mattn/webapi-vim'
-    " Neovim in Browser
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(1) } }
-    " Webdev
-    " Auto change html tags
-    Plug 'AndrewRadev/tagalong.vim'
     " Closetags
     Plug 'alvan/vim-closetag'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
-    " live server
-    Plug 'turbio/bracey.vim'
     " Better quickfix
     Plug 'kevinhwang91/nvim-bqf'
   endif
