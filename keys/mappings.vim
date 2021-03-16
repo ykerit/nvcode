@@ -27,7 +27,6 @@ else
 
   " I hate escape more than anything else
   inoremap jk <Esc>:w<cr>
-  inoremap kj <Esc>:w<cr>
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
