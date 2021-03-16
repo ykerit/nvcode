@@ -26,8 +26,8 @@ else
   inoremap <expr> <c-k> ("\<C-p>")
 
   " I hate escape more than anything else
-  inoremap jk <Esc>
-  inoremap kj <Esc>
+  inoremap jk <Esc>:w<cr>
+  inoremap kj <Esc>:w<cr>
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
@@ -44,8 +44,6 @@ else
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
 
-  " Alternate way to save
-  nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
   " Use control-c instead of escape
