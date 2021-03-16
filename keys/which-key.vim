@@ -142,7 +142,7 @@ let g:which_key_map.f = {
 
 " j is for java
 let g:which_key_map.j = {
-      \ 'name' : '+java' ,
+      \ 'name' : '+async' ,
       \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
       \ 'b' : [':AsyncTask project-build'     , 'build project'],
       \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
@@ -301,7 +301,7 @@ let g:which_key_map.l = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
+      \ ';' : [':FloatermNew --wintype=float'                   , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],

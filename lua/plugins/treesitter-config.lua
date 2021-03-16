@@ -1,5 +1,4 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained",
     highlight = {
         enable = true,              -- false will disable the whole extension
     },
@@ -9,17 +8,10 @@ require'nvim-treesitter.configs'.setup {
         updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
         persist_queries = false -- Whether the query persists across vim sessions
     },
-  rainbow = {
-    enable = false
-  }
+    rainbow = {
+        enable = true 
+    }
 }
-
-
--- require'nvim-treesitter.configs'.setup {
---   refactor = {
---     highlight_current_scope = { enable = false },
---   },
--- }
 
 -- require'nvim-treesitter.configs'.setup {
 --   refactor = {

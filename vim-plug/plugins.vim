@@ -28,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Have the file system follow you around
     Plug 'airblade/vim-rooter'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
     Plug 'p00f/nvim-ts-rainbow'
     " Cool Icons
