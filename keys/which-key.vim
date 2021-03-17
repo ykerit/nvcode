@@ -42,7 +42,7 @@ let g:which_key_map['e'] = [ ':NvimTreeToggle'                                 ,
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
-let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
+let g:which_key_map['p'] = [ ':LeaderfFile'                                    , 'search files' ]
 " TODO fix this
 " let g:which_key_map['q'] = [ ':q'                                              , 'quit' ]
 let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
@@ -302,7 +302,6 @@ let g:which_key_map.l = {
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=float'                   , 'terminal'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
@@ -312,7 +311,6 @@ let g:which_key_map.t = {
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-      \ 'u' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
 call which_key#register('<Space>', "g:which_key_map")

@@ -89,6 +89,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua'
     " Better quickfix
     Plug 'kevinhwang91/nvim-bqf'
+    " searcher
+    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
   endif
 
 call plug#end()
