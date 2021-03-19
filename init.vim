@@ -70,10 +70,6 @@ if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 
-" Plugin settings
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-
   " TODO
   " snippets
   " autoimport jsx
