@@ -25,92 +25,24 @@ local buffer_not_empty = function()
   return false
 end
 
--- gls.left[1] = {
---   FirstElement = {
---     -- provider = function() return '▋' end,
---     provider = function() return ' ' end,
---     highlight = {colors.bg,colors.bg}
---   },
--- }
--- gls.left[2] = {
---   ViMode = {
---     provider = function()
---       local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',V= 'VISUAL', [''] = 'VISUAL'}
---       return alias[vim.fn.mode()]
---     end,
---     separator = ' ',
---     separator_highlight = {colors.yellow,function()
---       if not buffer_not_empty() then
---         return colors.purple
---       end
---       return colors.purple
---     end},
---     highlight = {colors.grey,colors.purple,'bold'},
---   },
--- }
-gls.left[2] = {
-  ViMode = {
-    provider = function()
-      -- auto change color according the vim mode
-      local mode_color = {n = colors.purple, 
-                          i = colors.green,
-                          v = colors.blue,
-                          [''] = colors.blue,
-                          V = colors.blue,
-                          c = colors.purple,
-                          no = colors.magenta,
-                          s = colors.orange,
-                          S = colors.orange,
-                          [''] = colors.orange,
-                          ic = colors.yellow,
-                          R = colors.red,
-                          Rv = colors.red,
-                          cv = colors.red,
-                          ce=colors.red, 
-                          r = colors.cyan,
-                          rm = colors.cyan, 
-                          ['r?'] = colors.cyan,
-                          ['!']  = colors.red,
-                          t = colors.red}
-      vim.api.nvim_command('hi GalaxyViMode guibg='..mode_color[vim.fn.mode()])
-      return '  Yker '
-    end,
-    separator = ' ',
-    separator_highlight = {colors.yellow,function()
-      if not buffer_not_empty() then
-        return colors.bg
-      end
-      return colors.bg
-    end},
-    highlight = {colors.grey,colors.bg,'bold'},
-  },
+ gls.left[2] = {
+   ViMode = {
+     provider = function()
+       local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',v= 'VISUAL'}
+       return alias[vim.fn.mode()]
+     end,
+     separator = ' ',
+     separator_highlight = {colors.yellow,function()
+       if not buffer_not_empty() then
+         return colors.purple
+       end
+       return colors.purple
+     end},
+     highlight = {colors.grey,colors.purple,'bold'},
+   },
 }
--- gls.left[3] ={
---   FileIcon = {
---     separator = ' ',
---     provider = 'FileIcon',
---     condition = buffer_not_empty,
---     highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
---   },
--- }
--- gls.left[4] = {
---   FileName = {
---     provider = {'FileSize'},
---     condition = buffer_not_empty,
---     separator = ' ',
---     separator_highlight = {colors.purple,colors.bg},
---     highlight = {colors.magenta,colors.bg}
---   }
--- }
 
 gls.left[3] = {
-  GitIcon = {
-    provider = function() return ' ' end,
-    condition = buffer_not_empty,
-    highlight = {colors.orange,colors.bg},
-  }
-}
-gls.left[4] = {
   GitBranch = {
     provider = 'GitBranch',
     separator = ' ',
@@ -128,37 +60,37 @@ local checkwidth = function()
   return false
 end
 
-gls.left[5] = {
+gls.left[4] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = checkwidth,
     -- separator = ' ',
     -- separator_highlight = {colors.purple,colors.bg},
-    icon = '  ',
+    icon = ' + ',
     highlight = {colors.green,colors.bg},
   }
 }
-gls.left[6] = {
+gls.left[5] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = checkwidth,
     -- separator = ' ',
     -- separator_highlight = {colors.purple,colors.bg},
-    icon = '  ',
+    icon = '^',
     highlight = {colors.blue,colors.bg},
   }
 }
-gls.left[7] = {
+gls.left[6] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = checkwidth,
     -- separator = ' ',
     -- separator_highlight = {colors.purple,colors.bg},
-    icon = '  ',
+    icon = '-',
     highlight = {colors.red,colors.bg},
   }
 }
-gls.left[8] = {
+gls.left[7] = {
   LeftEnd = {
     provider = function() return ' ' end,
     separator = ' ',
@@ -166,36 +98,36 @@ gls.left[8] = {
     highlight = {colors.purple,colors.bg}
   }
 }
-gls.left[9] = {
+gls.left[8] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
-    icon = '  ',
+    icon = 'x',
     highlight = {colors.red,colors.bg}
   }
 }
-gls.left[10] = {
+gls.left[9] = {
   Space = {
     provider = function () return '' end
   }
 }
-gls.left[11] = {
+gls.left[10] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
-    icon = '  ',
+    icon = 'w',
     highlight = {colors.yellow,colors.bg},
   }
 }
-gls.left[12] = {
+gls.left[11] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
-    icon = '   ',
+    icon = 'H ',
     highlight = {colors.blue,colors.bg},
   }
 }
-gls.left[13] = {
+gls.left[12] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
-    icon = '   ',
+    icon = 'I',
     highlight = {colors.orange,colors.bg},
   }
 }
@@ -229,15 +161,6 @@ gls.right[4] = {
     highlight = {colors.yellow,colors.purple},
   }
 }
-
--- gls.short_line_left[1] = {
---   BufferType = {
---     provider = 'FileTypeName',
---     separator = ' ',
---     separator_highlight = {colors.purple,colors.bg},
---     highlight = {colors.grey,colors.purple}
---   }
--- }
 
 gls.short_line_left[1] = {
   LeftEnd = {

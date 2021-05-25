@@ -8,7 +8,7 @@ require('telescope').setup {
         vimgrep_arguments = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
         prompt_position = "top",
         prompt_prefix = " ",
-        selection_caret = " ",
+        selection_caret = "=>",
         entry_prefix = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",

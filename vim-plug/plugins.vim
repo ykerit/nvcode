@@ -12,17 +12,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " Text Navigation
     Plug 'unblevable/quick-scope'
-    " While I'm learning Lua
-    Plug 'nanotee/nvim-lua-guide'
-    Plug 'rafcamlet/nvim-luapad'
-
-  if exists('g:vscode')
-    " Easy motion for VSCode
-    " Plug 'asvetliakov/vim-easymotion'
-    Plug 'ChristianChiarulli/vscode-easymotion'
-    Plug 'machakann/vim-highlightedyank'
-  else
-
     " Easymotion
     Plug 'easymotion/vim-easymotion'
     " Have the file system follow you around
@@ -31,25 +20,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
     Plug 'p00f/nvim-ts-rainbow'
-    " Cool Icons
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'ryanoasis/vim-devicons'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Status Line
     Plug 'glepnir/galaxyline.nvim'
-    " Ranger
-    Plug 'kevinhwang91/rnvimr'
-    " Terminal
-    Plug 'voldikss/vim-floaterm'
     " Vista
     Plug 'liuchengxu/vista.vim'
-	" See what keys do like in emacs
-    Plug 'liuchengxu/vim-which-key'
     " Zen mode
     Plug 'junegunn/goyo.vim'
-    " Interactive code
-    Plug 'metakirby5/codi.vim'
     " Better tabline
     Plug 'romgrk/barbar.nvim'
     " Find and replace
@@ -65,31 +43,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope-media-files.nvim'
     " Intellisense
     Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
-    Plug 'glepnir/lspsaga.nvim'
     Plug 'onsails/lspkind-nvim'
-    Plug 'kosayoda/nvim-lightbulb'
-    Plug 'mfussenegger/nvim-dap'
     " https://github.com/mhartington/formatter.nvim look into this
     " File Explorer
     Plug 'kyazdani42/nvim-tree.lua'
     " Themes
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
+	Plug 'morhetz/gruvbox'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Git
     Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
-    Plug 'junegunn/gv.vim'
-    Plug 'rhysd/git-messenger.vim'
     " Closetags
     Plug 'alvan/vim-closetag'
     " Colorizer
     Plug 'norcalli/nvim-colorizer.lua'
-    " Better quickfix
-    Plug 'kevinhwang91/nvim-bqf'
-  endif
 
 call plug#end()
 
