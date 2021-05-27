@@ -15,7 +15,8 @@ local colors = {
   magenta = '#d16d9e',
   grey = '#c0c0c0',
   blue = '#569CD6',
-  red = '#D16969'
+  red = '#D16969',
+  limegreen = '#32CD32'
 }
 
 local buffer_not_empty = function()
@@ -31,7 +32,7 @@ end
        local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',v= 'VISUAL'}
        return alias[vim.fn.mode()]
      end,
-     separator = ' ',
+     separator = '',
      separator_highlight = {colors.yellow,function()
        if not buffer_not_empty() then
          return colors.purple
@@ -43,12 +44,20 @@ end
 }
 
 gls.left[3] = {
+	Space = {
+		provider = function() return ' ' end,
+		highlight = {colors.grey, colors.bg}
+	}
+}
+
+
+gls.left[4] = {
   GitBranch = {
     provider = 'GitBranch',
-    separator = ' ',
+    separator = '',
     separator_highlight = {colors.purple,colors.bg},
     condition = buffer_not_empty,
-    highlight = {colors.grey,colors.bg},
+    highlight = {colors.limegreen,colors.bg},
   }
 }
 
@@ -60,7 +69,7 @@ local checkwidth = function()
   return false
 end
 
-gls.left[4] = {
+gls.left[5] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = checkwidth,
@@ -70,27 +79,27 @@ gls.left[4] = {
     highlight = {colors.green,colors.bg},
   }
 }
-gls.left[5] = {
+gls.left[6] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = checkwidth,
     -- separator = ' ',
     -- separator_highlight = {colors.purple,colors.bg},
-    icon = '^',
+    icon = '↑',
     highlight = {colors.blue,colors.bg},
   }
 }
-gls.left[6] = {
+gls.left[7] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = checkwidth,
     -- separator = ' ',
     -- separator_highlight = {colors.purple,colors.bg},
-    icon = '-',
+    icon = '↓',
     highlight = {colors.red,colors.bg},
   }
 }
-gls.left[7] = {
+gls.left[8] = {
   LeftEnd = {
     provider = function() return ' ' end,
     separator = ' ',
@@ -98,33 +107,33 @@ gls.left[7] = {
     highlight = {colors.purple,colors.bg}
   }
 }
-gls.left[8] = {
+gls.left[9] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = 'x',
     highlight = {colors.red,colors.bg}
   }
 }
-gls.left[9] = {
+gls.left[10] = {
   Space = {
     provider = function () return '' end
   }
 }
-gls.left[10] = {
+gls.left[11] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = 'w',
     highlight = {colors.yellow,colors.bg},
   }
 }
-gls.left[11] = {
+gls.left[12] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = 'H ',
     highlight = {colors.blue,colors.bg},
   }
 }
-gls.left[12] = {
+gls.left[13] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = 'I',
@@ -170,25 +179,3 @@ gls.short_line_left[1] = {
     highlight = {colors.purple,colors.bg}
   }
 }
-
--- gls.short_line_right[1] = {
---   BufferIcon = {
---     provider= 'BufferIcon',
---     separator = ' ',
---     separator_highlight = {colors.purple,colors.bg},
---     highlight = {colors.grey,colors.purple}
---   }
--- }
--- function! s:my_bookmark_color() abort
---   let s:scl_guibg = matchstr(execute('hi SignColumn'), 'guibg=\zs\S*')
---   if empty(s:scl_guibg)
---     let s:scl_guibg = 'NONE'
---   endif
---   exe 'hi MyBookmarkSign guifg=' . s:scl_guibg
--- endfunction
--- call s:my_bookmark_color() " don't remove this line!
-
--- augroup UserGitSignColumnColor
---   autocmd!
---   autocmd ColorScheme * call s:my_bookmark_color()
--- augroup END

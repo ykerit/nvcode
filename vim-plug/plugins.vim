@@ -43,7 +43,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope-media-files.nvim'
     " Intellisense
     Plug 'neovim/nvim-lspconfig'
-    Plug 'onsails/lspkind-nvim'
+    "Plug 'onsails/lspkind-nvim'
+	"Plug 'hrsh7th/nvim-compe'
+	Plug 'ycm-core/YouCompleteMe'
     " https://github.com/mhartington/formatter.nvim look into this
     " File Explorer
     Plug 'kyazdani42/nvim-tree.lua'

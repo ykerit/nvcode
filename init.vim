@@ -32,13 +32,14 @@ luafile ~/.config/nvim/lua/plugins/nvimtree-config.lua
 luafile ~/.config/nvim/lua/plugins/treesitter-config.lua
 luafile ~/.config/nvim/lua/plugins/colorizer-config.lua
 luafile ~/.config/nvim/lua/plugins/telescope-config.lua
-luafile ~/.config/nvim/lua/lsp/lsp-kind.lua
+"luafile ~/.config/nvim/lua/plugins/compe-config.lua
+"luafile ~/.config/nvim/lua/plugins/lspkind-config.lua
 " LSP: https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 luafile ~/.config/nvim/lua/lsp/lsp-config.lua
-luafile ~/.config/nvim/lua/lsp/python-ls.lua
-luafile ~/.config/nvim/lua/lsp/bash-ls.lua
-luafile ~/.config/nvim/lua/lsp/vim-ls.lua
-luafile ~/.config/nvim/lua/lsp/clangd-ls.lua
+"luafile ~/.config/nvim/lua/lsp/python-ls.lua
+"luafile ~/.config/nvim/lua/lsp/bash-ls.lua
+"luafile ~/.config/nvim/lua/lsp/vim-ls.lua
+"luafile ~/.config/nvim/lua/lsp/clangd-ls.lua
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>

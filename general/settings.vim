@@ -35,7 +35,6 @@ set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
-set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h18
 set termguicolors
 
 " New stuff
@@ -64,14 +63,4 @@ cmap w!! w !sudo tee %
 set foldmethod=indent
   "Open all when entering for the first time
 set foldlevel=20
-  "Save the state for the next time
-" autocmd BufWinLeave *.* mkview
-" autocmd BufWinEnter *.* silent! loadview
 
-" font powerline
-if has("mac") || has("macunix")
-    set guifont=Monaco\ for\ Powerline:h24
-elseif has("win32") || has("win64")
-    set guifont=Monaco\ for\ Powerline:h14:cANSI
-    set renderoptions=type:directx,renmode:5
-endif
