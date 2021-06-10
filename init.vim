@@ -5,9 +5,7 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 " General Settings
-if !exists('g:vscode')
-  source ~/.config/nvim/plug-config/polyglot.vim
-endif
+source ~/.config/nvim/plug-config/polyglot.vim
 source ~/.config/nvim/vim-plug/plugins.vim
 source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/functions.vim
@@ -40,11 +38,6 @@ luafile ~/.config/nvim/lua/lsp/lsp-config.lua
 "luafile ~/.config/nvim/lua/lsp/bash-ls.lua
 "luafile ~/.config/nvim/lua/lsp/vim-ls.lua
 "luafile ~/.config/nvim/lua/lsp/clangd-ls.lua
-
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Add paths to node and python here
 if !empty(glob("~/.config/nvim/paths.vim"))
